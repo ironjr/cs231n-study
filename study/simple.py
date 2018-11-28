@@ -7,7 +7,7 @@ from scipy.misc import imsave
 
 # Relative direction of CIFAR-10 dataset
 # Original data retrieved from http://www.cs.toronto.edu/~kriz/cifar.html
-cifar_dir = '../ML-Dataset/CIFAR-10/cifar-10-batches-py/'
+cifar_dir = '../../ML-Dataset/CIFAR-10/cifar-10-batches-py/'
 
 # Refer to instruction of depackaging the dataset from the reference
 def unpickle(file):
