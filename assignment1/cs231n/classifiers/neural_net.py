@@ -75,8 +75,12 @@ class TwoLayerNet(object):
     # Store the result in the scores variable, which should be an array of      #
     # shape (N, C).                                                             #
     #############################################################################
-    pass
-    #############################################################################
+    mid = X @ W1 + b1
+    mid = np.maximum(mid, np.zeros_like(mid)) # ReLU
+    scores = mid @ W2 + b2
+    #scores = np.maximum(scores, np.zeros_like(scores)) # ReLU
+    scores = softmax_loss_naive(scores)
+    ############################################################################
     #                              END OF YOUR CODE                             #
     #############################################################################
     
